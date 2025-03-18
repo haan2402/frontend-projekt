@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
     <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <script type="module" src="main.js"></script>
 </head>
+<header>
+    <h1>WeatherMap</h1> 
+</header>
 <body>
+    <main class="main-container">
+        <h2>Hitta din väderprognos</h2>
+        <div>
+            <input type="text" id="search-place" placeholder="Sök och välj din plats">
+            <button id="search">Sök</button>
+        </div>
+
+        <div id="map"></div>
+
+        <div>
+            <h2>Dagens väder</h2>
+            <p></p>
+        </div>
+    </main>
     
 </body>
 </html>

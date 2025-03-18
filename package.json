@@ -1,0 +1,16 @@
+{
+  "name": "boilerplate-parcel",
+  "version": "1.0.0",
+  "author": "Hanna Angeria",
+  "license": "ISC",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

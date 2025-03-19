@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     color: base.$text-color;
     font-size: base.$text-size;
     text-align: center;
+    height: 100vh;
 }
 
 /*selector inheritance for header and footer, extend to use on both header and footer*/
@@ -20,8 +22,6 @@ body {
     color: base.$header-text-color;
     padding: 20px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
@@ -48,14 +48,17 @@ footer {
 }
 .main-container {
     width: 80%;
+    max-width: 800px;
     background-color: base.$container-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 
-    h2 {
+    h2, h3 {
         padding: 15px;
         font-size: base.$nav-text;
     }
@@ -72,15 +75,36 @@ footer {
 
     button {
         padding: 5px 10px;
+        background-color: #86B6F6;
+        border: 1px solid black;
+        cursor: pointer;
+    }
 
+    button:hover {
+        background-color: #6e95c8;
     }
 }
 
 #map {
-    width: 400px;
+    width: 500px;
     height: 250px;
+    margin: 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #b1b1b1;
 }
 
 .weather-div {
     padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 300px;
+        height: 250px;
+    }
 }

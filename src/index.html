@@ -14,10 +14,10 @@
     crossorigin=""></script>
     <script type="module" src="main.js"></script>
 </head>
-<header>
-    <h1>WeatherMap</h1> 
-</header>
 <body>
+    <header>
+        <h1>WeatherMap</h1> 
+    </header>
     <main class="main-container">
         <h2>Hitta din väderprognos</h2>
         <div class="search-div">
@@ -25,12 +25,16 @@
             <button id="search">Sök</button>
         </div>
 
+        <h3>Dagens väder</h3>
+        <div class="weather-div">
+            
+            <p id="temp">Temperatur:</p>
+            <p id="rain">Nederbörd:</p>
+            <p id="uv">UV-index:</p>
+        </div>
+
         <div id="map"></div>
 
-        <div class="weather-div">
-            <h3>Dagens väder</h3>
-            <p></p>
-        </div>
     </main>
     <footer>
         <h3>Följ oss för mer väderuppdateringar</h3>

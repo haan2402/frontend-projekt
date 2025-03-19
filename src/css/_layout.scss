@@ -27,6 +27,7 @@ body {
 
 header {
     @extend .head-foot-bg;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
     h1 {
         font-size: base.$header-text;
@@ -46,6 +47,8 @@ footer {
         cursor: pointer;
     }
 }
+
+/*styling for main container, center in the middle*/
 .main-container {
     width: 80%;
     max-width: 800px;
@@ -56,7 +59,6 @@ footer {
     align-items: center;
     margin: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
 
     h2, h3 {
         padding: 15px;
@@ -109,7 +111,7 @@ footer {
     right: 10;
 }
 
-
+/*styling for search input and button*/
 .search-div {
     padding: 15px;
 
@@ -117,6 +119,7 @@ footer {
         width: 70%;
         padding: 5px;
         border: 2px solid #b1b1b1;
+        border-radius: 5px;
     }
 
     button {
@@ -124,6 +127,7 @@ footer {
         background-color: #86B6F6;
         border: 1px solid black;
         cursor: pointer;
+        border-radius: 10px;
     }
 
     button:hover {
@@ -131,6 +135,7 @@ footer {
     }
 }
 
+/*sizing the map and adding a little shadow and border and border-radius*/
 #map {
     width: 500px;
     height: 250px;
@@ -140,6 +145,7 @@ footer {
     border: 1px solid #b1b1b1;
 }
 
+/*positioning weather updates and symbols*/
 .weather-div {
     padding: 20px;
     display: flex;
@@ -152,9 +158,15 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+/*styling for smaller devices*/
+@media (max-width: 666px) {
     #map {
         width: 300px;
         height: 250px;
+    }
+
+    .weather-div {
+        flex-direction: column;
+        align-items: center;
     }
 }

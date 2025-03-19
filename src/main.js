@@ -2,6 +2,7 @@
 
 /**
  * Hämtar in karta från Leaflet, startar marker på Stockholm
+ * @constant {Object} map - kartan startar på Sockholm innan användaren har sökt på en plats
  */
 const map = L.map('map').setView([59.3293, 18.0686], 10);
 
@@ -14,6 +15,7 @@ const marker = L.marker([59.3293, 18.0686]).addTo(map);
 
 /**
  * Funktion som uppdaterar kartan efter sökning 
+ * @param {string} searchInput - hämtar in vad anvädaren sökt för plats
  */
 function getMap() {
     const searchInput = document.getElementById('search-place').value;
@@ -37,6 +39,9 @@ function getMap() {
 
 /**
  * Hämtar in väderinfo
+ * @async
+ * @function getWeather hämtar in väder från API
+ * @throws {Error} - vid problem vid laddning av sidan
  */
 async function getWeather(lat, lon) {
     try {
@@ -53,6 +58,7 @@ async function getWeather(lat, lon) {
 
 /**
  * Funktion för att hämta in väderdatan
+ * @param {Object} data - hämtar in temperatur, nederbörd och uv-index
  */
 function writeWeather(data) {
     document.getElementById('temp').innerHTML = `Temperatur: ${data.current.temperature_2m} C`;

@@ -1,0 +1,86 @@
+@use "base";
+
+/*styling the basics of page*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: base.$back-color;
+    font-family: base.$font-stack;
+    color: base.$text-color;
+    font-size: base.$text-size;
+    text-align: center;
+}
+
+/*selector inheritance for header and footer, extend to use on both header and footer*/
+.head-foot-bg {
+    background-color: base.$header-color;
+    color: base.$header-text-color;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    @extend .head-foot-bg;
+
+    h1 {
+        font-size: base.$header-text;
+    }
+}
+
+footer {
+    @extend .head-foot-bg;
+
+    h3 {
+        font-size: base.$nav-text;
+    }
+
+    i {
+        font-size: 25px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+.main-container {
+    width: 80%;
+    background-color: base.$container-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    h2 {
+        padding: 15px;
+        font-size: base.$nav-text;
+    }
+}
+
+.search-div {
+    padding: 15px;
+
+    input {
+        width: 70%;
+        padding: 5px;
+        border: 2px solid #b1b1b1;
+    }
+
+    button {
+        padding: 5px 10px;
+
+    }
+}
+
+#map {
+    width: 400px;
+    height: 250px;
+}
+
+.weather-div {
+    padding: 20px;
+}

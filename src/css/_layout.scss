@@ -170,3 +170,25 @@ footer {
         align-items: center;
     }
 }
+
+/*styling for darktheme*/
+@media (prefers-color-scheme: dark) {
+    body {
+    background-color: base.$dark-color;
+    color: base.$dark-text-color;
+    }
+
+    .main-container {
+        background-color: base.$dark-container-color !important;
+    }
+
+    header,
+    footer {
+        background-color: base.$dark-header !important; 
+    }
+
+    button {
+        background-color: base.$dark-color !important;
+        color: base.$dark-text-color;
+    }
+    }

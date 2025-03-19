@@ -58,6 +58,13 @@ function writeWeather(data) {
     document.getElementById('temp').innerHTML = `Temperatur: ${data.current.temperature_2m} C`;
     document.getElementById('rain').innerHTML = `Nederbörd: ${data.daily.rain_sum[0]} mm`;
     document.getElementById('uv').innerHTML = `UV-index: ${data.daily.uv_index_max[0]}`;
+
+    let sunEl = document.getElementById('sun');
+    if(data.daily.uv_index_max[0] > 3) {
+        sunEl.style.display = 'block';
+    } else {
+        sunEl.style.display = 'none';
+    }
 }
 
 

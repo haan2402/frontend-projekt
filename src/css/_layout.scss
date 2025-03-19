@@ -64,13 +64,14 @@ footer {
     }
 }
 
-.sun {
+#sun {
         background-color: yellow;
         border-radius: 50%;
         height: 60px;
         width: 60px;
         aspect-ratio: 1 / 1;
         animation: pulse 6s ease-in-out infinite;
+        display: none;
     }
 
 

@@ -65,6 +65,13 @@ function writeWeather(data) {
     } else {
         sunEl.style.display = 'none';
     }
+
+    let cloudEl = document.getElementById('cloud');
+    if(data.daily.uv_index_max[0] < 3) {
+        cloudEl.style.display = 'block';
+    } else {
+        cloudEl.style.display = 'none';
+    }
 }
 
 

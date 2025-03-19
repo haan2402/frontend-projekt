@@ -13,3 +13,16 @@
         opacity: 1;
     }
 }
+
+/*keyfram for moving the cloud*/
+@keyframes moveCloud {
+    0% {
+        left: 50px;
+    }
+    50% {
+        left: -50px;
+    }
+    100% {
+        left: 50px;
+    }
+}

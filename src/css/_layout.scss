@@ -64,6 +64,7 @@ footer {
     }
 }
 
+/*sun styling, inspiration from developer.mozilla*/
 #sun {
         background-color: yellow;
         border-radius: 50%;
@@ -73,6 +74,40 @@ footer {
         animation: pulse 6s ease-in-out infinite;
         display: none;
     }
+
+/*styling for a cloud, inspiration from: foolishdeveloper.com*/
+#cloud {
+    position: relative;
+    margin-top: 20px;
+    width: 180px;
+    height: 60px;
+    background-color: #E1E1E4;
+    border-radius: 90px;
+    animation: moveCloud 10s linear infinite;
+    display: none;
+}
+
+#cloud:before, 
+#cloud:after {
+    content: '';
+    position: absolute;
+    background-color: #E1E1E4;
+    border-radius: 50%;
+}
+
+#cloud:before {
+    width: 80px;
+    height: 80px;
+    top: -30;
+    left: 30;
+}
+
+#cloud:after {
+    width: 80px;
+    height: 80px;
+    top: -20;
+    right: 10;
+}
 
 
 .search-div {
@@ -111,6 +146,10 @@ footer {
     justify-content: space-evenly;
     width: 100%;
     gap: 10px;
+
+    i {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 768px) {
